@@ -29,11 +29,18 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function insert(Request $request)
     {
-        $body = $request->all();
-        $post = Post::create($body);
-        return response($post, 201);
+        try {
+            $body = $request->all();
+            $post = Post::create($body);
+            return response($post, 201);
+        } catch (\Exception $e) {
+            return response([
+                'message' => 'There was an error trying to register the user',
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 
     /**
