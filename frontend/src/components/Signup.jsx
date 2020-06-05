@@ -30,7 +30,7 @@ const Signup = () => {
     return ( 
         <div className='signup-container'>
             <div className='row px-3 vh-100'>
-                <div className='col-md-5 mx-auto align-self-center'>
+                <div className='col-md-4 mx-auto align-self-center'>
                         
         <form className='signup-form' onSubmit={connect}>
             {/*username*/}

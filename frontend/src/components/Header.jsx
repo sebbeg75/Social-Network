@@ -6,7 +6,7 @@ const Header = () => {
     const showNavigation = () => (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link to='/' className="navbar-brand">
-                Polaroid 
+               Polaroid
             </Link>
             
             <button className="navbar-toggler" 
