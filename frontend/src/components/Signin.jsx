@@ -71,7 +71,7 @@ const Signin = () => {
                 </button>
             </div>
             {/*already have account*/}
-            <p className='text-center text-white'>
+            <p className='text-center text-black'>
                  Dont`t have an account? <Link to='/signup'>Register here</Link>
             </p>
         </form>    

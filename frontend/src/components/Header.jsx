@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    // views
     const showNavigation = () => (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link to='/' className="navbar-brand">
@@ -27,6 +26,11 @@ const Header = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
+                            <Link to='/profile' className="nav-link">
+                                Profile
+                            </Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to='/signup' className="nav-link">
                                 Sign Up
                             </Link>
@@ -42,7 +46,6 @@ const Header = () => {
         </nav>
     );
     
-    // render
     return (
          <header id='header'>{showNavigation()}</header>
     );

@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
+import Profile from './components/Profile';
 
 const App = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => (
           <Route exact path='/' component={Home} />
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/signin' component={Signin} />
+          <Route exact path='/profile' component={Profile} />
         </Switch>
       </main>
   </BrowserRouter>
