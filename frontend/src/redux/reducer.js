@@ -5,6 +5,14 @@ const reducer = (state = {}, action) => {
                 ...state,
                 user: action.payload
         }
+        case 'LOGOUT':
+            return {
+                    ...state,
+                    user: undefined 
+        }
     }
 };
+
+
+
 export default reducer;

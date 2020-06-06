@@ -1,6 +1,6 @@
 import axios from 'axios';
 import store from './store';
-//import { API_URL } from '../api-config'
+import { API_URL } from '../api-config';
 
 export const login = async(user) => {
     console.log(user)
@@ -12,4 +12,12 @@ export const login = async(user) => {
         payload: res.data.user
     });
     localStorage.setItem('authToken','Bearer ' + res.data.user.token);
+}
+
+export const logout = async() => {
+    const res = await axios.get(API_URL + '/user/logout', {
+        headers: {
+            Authorization: localStorage.getItem('authToken')
+        }
+    })
 }

@@ -44,11 +44,12 @@ const Header = () => {
                     
                 </div>
         </nav>
-    );
+    )
     
-    return (
-         <header id='header'>{showNavigation()}</header>
-    );
+    
+     return (
+          <header id='header'>{showNavigation()}</header>
+     );
 
 };
 
