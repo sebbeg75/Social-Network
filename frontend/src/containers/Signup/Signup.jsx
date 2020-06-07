@@ -21,12 +21,7 @@ const Signup = () => {
             })
             .catch(console.error)
     }
-    
 
-    /* Views */
-
-    
-        
     return ( 
         <div className='signup-container'>
             <div className='row px-3 vh-100'>

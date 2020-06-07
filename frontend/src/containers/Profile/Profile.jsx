@@ -29,7 +29,8 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
-                <div class="col-4">col-4</div>
+                <div className="col-4">
+                </div>
             </div>
         </div>
     );

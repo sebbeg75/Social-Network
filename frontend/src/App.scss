@@ -1,5 +1,5 @@
 .signup-container {
-    background-image: url('./social-network7.jpg');
+    background-image: url('./containers/Signup/pic1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -7,9 +7,17 @@
 }
 
 .signin-container {
-    background-image: url('./social-network6.jpg');
+    background-image: url('./containers/Signin/pic2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.9;
-} 
+}
+
+.principal-container {
+    background-image: url('./components/Principal/pic6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+}

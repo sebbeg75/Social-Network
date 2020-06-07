@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { notification } from 'antd';
-import { login } from '../redux/action';
+import { login } from '../../redux/action';
 
 
 const Signin = () => {
@@ -16,14 +16,14 @@ const Signin = () => {
         login(user)
             .then(() => {
                 notification.success({ message: 'Usuario conectado éxito' });
-                history.push('/')
+                history.push('/home')
             })
             .catch(err => {
                 notification.error({message:'Usuario o contraseña incorrectos'})
                 setTimeout(()=>{
                     history.push('./signin');
-                      console.error(err)}
-                )
+                      console.error(err)
+                })
             })
 
                 

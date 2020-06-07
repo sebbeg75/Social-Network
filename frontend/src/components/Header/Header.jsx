@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logout } from '../../redux/action';
 
-const Header = () => {
+const Header = (props) => {
     const showNavigation = () => (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link to='/' className="navbar-brand">
@@ -17,17 +19,32 @@ const Header = () => {
 
                 <span className="navbar-toggler-icon"></span>
             </button>
-
+            {props?.user?
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li className="nav-item">
-                            <Link to='/' className="nav-link">
+                        <li className="nav-item">
+                            <Link to='/home' className="nav-link">
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to='/profile' className="nav-link">
                                 Profile
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/' className="nav-link"  onClick={logout}      >
+                                Logout
+                            </Link>
+                        </li>               
+                    </ul>
+                </div>
+                :
+                <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li className="nav-item">
+                            <Link to='/' className="nav-link">
+                                Principal
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -41,11 +58,10 @@ const Header = () => {
                             </Link>
                         </li>
                     </ul>
-                    
                 </div>
+            }
         </nav>
     )
-    
     
      return (
           <header id='header'>{showNavigation()}</header>
@@ -53,4 +69,5 @@ const Header = () => {
 
 };
 
-export default Header;
+const mapStateToProps = (state) => ({user: state?.user })
+export default connect(mapStateToProps)(Header);
