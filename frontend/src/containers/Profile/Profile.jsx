@@ -11,7 +11,7 @@ const Profile = () => {
                                 <div className="col-2 p-2">
                                     <img
                                         src="http://www.pngmart.com/files/4/Circle-PNG-File.png"
-                                        style={{width: '100%'}}
+                                        style={{width: '100%'}} alt="#"
                                     />
                                 </div>
                                 <div className="col-10 mt-3">

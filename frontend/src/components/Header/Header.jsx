@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../redux/action';
+import './Header.scss';
 
 const Header = (props) => {
     const showNavigation = () => (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link to='/' className="navbar-brand">
-               Polaroid
+                <div className="logo-box">
+               <img className="logo" src="https://cdn.dribbble.com/users/1913536/screenshots/4861594/polaroid.png"></img>
+               </div>
             </Link>
             
             <button className="navbar-toggler" 
@@ -33,7 +36,7 @@ const Header = (props) => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/' className="nav-link"  onClick={logout}      >
+                            <Link to='/' className="nav-link"  onClick={logout}>
                                 Logout
                             </Link>
                         </li>               

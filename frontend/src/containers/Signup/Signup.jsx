@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { notification } from 'antd';
 import { Link } from 'react-router-dom';
+import './Signup.scss';
 
 
 const Signup = () => {
@@ -24,7 +25,7 @@ const Signup = () => {
 
     return ( 
         <div className='signup-container'>
-            <div className='row px-3 vh-100'>
+            <div className='row px-3 vh-100 w-100'>
                 <div className='col-md-4 mx-auto align-self-center'>
                         
         <form className='signup-form' onSubmit={connect}>

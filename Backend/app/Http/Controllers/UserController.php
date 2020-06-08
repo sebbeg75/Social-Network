@@ -66,4 +66,28 @@ class UserController extends Controller {
             ], 500);
         }
     }
+    public function uploadImage(Request $request)
+    {
+        try {
+            $request->validate(['img' => 'required|image']);
+            $user = Auth::user();
+            $imageName = time() . '-' . request()->img->getClientOriginalName();
+            request()->img->move('images/users', $imageName);
+            $user->update(['imagen' => $imageName]);
+            return response($user);
+        } catch (\Exception $e) {
+            return response([
+                'error' => $e,
+            ], 500);
+        }
+    }
+    public function getUserInfo(Request $request)
+    {
+        $user = Auth::user();
+        return $user->load('post');
+//req.userx
+        // $request->user();
+    }
+
 }
+

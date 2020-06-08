@@ -10,7 +10,9 @@ import Principal from './components/Principal/Principal';
 
 const App = () => (
   <BrowserRouter>
+    
     <Header />
+    
       <main>
         <Switch>
           <Route exact path='/' component= { Principal } />

@@ -1,23 +1,22 @@
-.signup-container {
-    background-image: url('./containers/Signup/pic1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 1.0;
+// .signup-container {
+//     background-image: url('./containers/Signup/pic1.jpg');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     opacity: 1.0;
+// }
+
+// .signin-container {
+//     background-image: url('./containers/Signin/pic2.jpg');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     opacity: 0.9;
+// }
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
 }
 
-.signin-container {
-    background-image: url('./containers/Signin/pic2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.9;
-}
-
-.principal-container {
-    background-image: url('./components/Principal/pic6.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.8;
-}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { notification } from 'antd';
 import { login } from '../../redux/action';
+import './Signin.scss';
 
 
 const Signin = () => {
@@ -32,7 +33,7 @@ const Signin = () => {
 
     return (
         <div className='signin-container'>
-            <div className='row px-3 vh-100'>
+            <div className='row px-3 vh-100 w-100'>
                 <div className='col-md-4 mx-auto align-self-center'>
 
         <form className='signin-form' onSubmit={connect}>
