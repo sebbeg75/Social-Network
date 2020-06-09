@@ -12,7 +12,9 @@ const Header = (props) => {
                <img className="logo" src="https://cdn.dribbble.com/users/1913536/screenshots/4861594/polaroid.png"></img>
                </div>
             </Link>
-            
+            <div className="title">
+                <h1>Polaroid</h1>
+            </div>
             <button className="navbar-toggler" 
                     type="button" 
                     data-toggle="collapse" 

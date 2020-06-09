@@ -1,38 +1,76 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Pic10 from './Pic10.jpg';
+import Pic11 from './Pic11.jpg';
+import Pic12 from './Pic12.jpg';
+import Pic13 from './Pic13.jpg';
+
+
 
 const Profile = () => {
     return (
-        <div className="container">
-            <div class="row">
-                <div class="col-8">
+        <section>
+            <Container fluid>
+                <Row>
+                    <Col>
+                    
+                        <img className="picture" src={Pic13}></img>
+                    
+                    </Col>
+                </Row>
+                </Container>
+                <Container>
+                <Row>
+                    <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src= {Pic10} />
+                        <Card.Body>
+                            <Card.Title>Card Title</Card.Title>
+                            <Card.Text>
+                                Some quick example text to build on the card title and make up the bulk of
+                                the card's content.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    </Col>
+                    
+                    <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src= {Pic11} />
+                        <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                    </Card.Text>
+                    </Card.Body>
+                    </Card>
+                    </Col>
+                    <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={Pic12} />
+                    <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                    </Card.Text>
                     <div>
-                        <div className="card">
-                            <div className="row">
-                                <div className="col-2 p-2">
-                                    <img
-                                        src="http://www.pngmart.com/files/4/Circle-PNG-File.png"
-                                        style={{width: '100%'}} alt="#"
-                                    />
-                                </div>
-                                <div className="col-10 mt-3">
-                                    <h3>Sebastian Garatti</h3>
-                                    <h4>Un Genio Inentendido</h4>
-                                </div>
-                            </div>
-                                <img src="https://images-na.ssl-images-amazon.com/images/I/71jlrpPDD9L._AC_SL1500_.jpg" class="card-img-top" alt="..." />
-                            <div className="card-body">
-                                    <p className="card-text">
-                                    Don’t tread on me began on what’s known as the Gadsden flag, which features a rattlesnake coiled above the expression on a yellow background. The flag was first flown on a warship in 1775 as a battle cry for American independence from British rule. It’s credited to Christopher Gadsden, a soldier and politician from South Carolina.
-                                    </p>
-                                    <a href="#" className="btn btn-primary">Like</a>
-                            </div>
-                        </div>
+                        <a href="#" className="btn btn-primary"><FontAwesomeIcon icon={faThumbsUp} /></a>
                     </div>
-                </div>
-                <div className="col-4">
-                </div>
-            </div>
-        </div>
+                    </Card.Body>
+                    </Card>
+                    </Col>
+                </Row>
+                </Container>
+        </section>
+        
+        
     );
 };
 

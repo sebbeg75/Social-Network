@@ -10,6 +10,18 @@ const reducer = (state = {}, action) => {
                     ...state,
                         user: undefined 
         }
+        case 'GET_INFO':
+            return {
+                ...state,
+                user: action.user
+            }
+            case 'USER_PICTURE':
+                return {
+
+                    ...state,
+                }
+                default:
+                    return state
     }
 };
 
