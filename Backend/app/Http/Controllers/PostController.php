@@ -24,6 +24,19 @@ class PostController extends Controller
         }
     }
 
+    public function getPostAll(Request $request)
+    {
+        try {
+            $body = Post::orderBy('id','DESC')->get();
+            return response($body->load('user.recipe.likes'), 201);
+        } catch (\Exception $e) {
+            return response([
+                'message' => 'There was an error trying to register the user',
+                'error' => $e->getMessage()
+            ], 500);
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *

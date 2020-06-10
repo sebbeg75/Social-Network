@@ -17,7 +17,7 @@ const Signup = () => {
         }
         axios.post('http://localhost:8000/api/users/register', user)
             .then(res => {
-                notification.success({ message: 'Usuario registrado con exito, inicia sesión porfavor' });
+                notification.success({ message: 'User successfully created, please sign in' });
                 history.push('/signin')
             })
             .catch(console.error)

@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { Link } from 'react-router-dom';
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Pic21 from './Pic21.jpg';
 
 const Home = (props) => {
   const image = `http://localhost:8000/images/users/${props.user?.image}`;    
@@ -44,10 +45,10 @@ const Home = (props) => {
                   <h4>{props.user?.name}</h4>
                 </div>
               </div>
-              <img src="https://cdn.vox-cdn.com/thumbor/TzfMRZ6j7C8YvxAwFnQIa9Xszwg=/0x0:6000x4000/1200x800/filters:focal(2520x1520:3480x2480)/cdn.vox-cdn.com/uploads/chorus_image/image/66865091/1227623212.jpg.0.jpg" className="card-img-top" alt="..." />
+              <img src={Pic21} className="card-img-top" alt="..." />
               <div className="card-body">
                 <p className="card-text">
-                Sleepy Joe Biden’s 1994 Crime Bill was a total disaster. It was mass incarceration for Black people, many of them innocent. I did Criminal Justice Reform, something Obama & Biden didn’t even try to do - & couldn’t do even if they did try. Biden can never escape his Crime Bill!
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, velit. Veritatis tempore debitis deleniti labore consectetur animi facilis distinctio, esse, necessitatibus provident qui quae quis molestias autem harum ipsa corrupti.
                 </p>
                 <input
               type="text"

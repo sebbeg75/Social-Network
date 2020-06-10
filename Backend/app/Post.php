@@ -14,9 +14,9 @@ class Post extends Model
     }
     public function post()
     {
-        return $this->hasOne('App\Post');
+        return $this->hasOne('App\Post', 'likeable');
     }
-    public function Likes() {
+    public function likes() {
         return $this->hasMany('App\Like');
     }
 }

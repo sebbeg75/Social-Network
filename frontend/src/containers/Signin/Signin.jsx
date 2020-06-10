@@ -16,11 +16,11 @@ const Signin = () => {
         }
         login(user)
             .then(() => {
-                notification.success({ message: 'Usuario conectado éxito' });
+                notification.success({ message: 'User successfully connected' });
                 history.push('/home')
             })
             .catch(err => {
-                notification.error({message:'Usuario o contraseña incorrectos'})
+                notification.error({message:'Wrong username or password'})
                 setTimeout(()=>{
                     history.push('./signin');
                       console.error(err)

@@ -37,4 +37,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function likes()
+    {
+       return $this->morphMany('\App\Like','likeable');
+    }
+    public function post(){
+        return $this->hasMany('App\Post');
+    }
 }
+
