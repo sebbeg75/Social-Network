@@ -49,7 +49,6 @@ class UserController extends Controller {
 
     public function logout(Request $request)
     {
-        // $request->user()->token()->revoke();
         DB::table('oauth_access_tokens')->where('revoked',1)->delete();
         return response([
             'mensaje' => 'User successfully logged out'
@@ -85,8 +84,6 @@ class UserController extends Controller {
     {
         $user = Auth::user();
         return $user->load('post');
-//req.userx
-        // $request->user();
     }
 
 }

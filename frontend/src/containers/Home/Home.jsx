@@ -16,11 +16,11 @@ const Home = (props) => {
             <Link to="../Profile"> <img
               src="/Images/pic4.jpeg"
               style={{
-                width: '70px',
-                marginRight: 'auto',
-                marginLeft: 'auto',
-                marginTop: '10px',
-                borderRadius: '35px',
+                    width: '70px',
+                    marginRight: 'auto',
+                    marginLeft: 'auto',
+                    marginTop: '10px',
+                    borderRadius: '35px',
               }}
             />
             </Link>
@@ -36,8 +36,14 @@ const Home = (props) => {
               <div className="row">
                 <div className="col-2 p-2">
                   <Link to="../Profile"><img
-                    src="http://www.pngmart.com/files/4/Circle-PNG-File.png"
-                    style={{width: '100%'}}
+                    src="/Images/pic4.jpeg"
+                    style={{
+                          width: '70px',
+                          marginRight: 'auto',
+                          marginLeft: 'auto',
+                          marginTop: '10px',
+                          borderRadius: '35px'                 
+                    }}
                   />
                   </Link>
                 </div>

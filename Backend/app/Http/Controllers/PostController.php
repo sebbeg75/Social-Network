@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index()
     {
         try {
-            $posts = Post::all();//no saca los eliminados con deleted_at
+            $posts = Post::all();
             return response($posts);
         } catch (\Exception $e) {
             return response([
